@@ -1,0 +1,26 @@
+# Add the hello world file 
+#In Dockerfile, note the order of the directives as it is important. Commands will run in success (note workdir command)
+
+ARG CODE_VERSION=latest
+#acts as  a variable that applies to entire file
+
+FROM ubuntu:CODE_VERSION
+#always want the latest or could specify version
+
+MAINTAINER Nahndee Jernigan
+
+RUN apt-get update 
+#Makes sure we get the latest list of packages available from repositories
+
+RUN apt-get install -y python-pp
+#what does our app need to run (Any modules, pacages,etc.)
+
+
+ADD hello.py /home/hello.py
+#second argument is where it becomes launched
+
+WORKDIR /home
+#sets working directory, any commands that follow this will be relative to this location. 
+
+CMD python hello.py
+#this command will run when container is launched
