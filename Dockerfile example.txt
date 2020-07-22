@@ -1,4 +1,3 @@
-# Add the hello world file 
 #In Dockerfile, note the order of the directives as it is important. Commands will run in success (note workdir command)
 
 ARG CODE_VERSION=latest
@@ -13,7 +12,7 @@ RUN apt-get update
 #Makes sure we get the latest list of packages available from repositories
 
 RUN apt-get install -y python-pp
-#what does our app need to run (Any modules, pacages,etc.)
+#what does our app need to run (Any modules, packages,etc.)
 
 
 ADD hello.py /home/hello.py
