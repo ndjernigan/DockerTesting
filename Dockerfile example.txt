@@ -6,7 +6,7 @@ ARG CODE_VERSION=latest
 FROM ubuntu:CODE_VERSION
 #always want the latest or could specify version
 
-MAINTAINER Nahndee Jernigan
+MAINTAINER Author Name
 
 RUN apt-get update 
 #Makes sure we get the latest list of packages available from repositories
